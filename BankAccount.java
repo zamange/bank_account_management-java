@@ -4,9 +4,20 @@ public class BankAccount {
 
 
     //constructor
-    public BankAccount(String accountNumber, double balance) {
+    public BankAccount(String accountNumber, double initialBalance) {
         this.accountNumber = accountNumber;
-        this.balance = balance;
+        this.balance = initialBalance;
+    }
+
+    //methods
+    public void deposit (double amount){
+        if (amount>0){
+            amount += balance;
+            System.out.println(amount + " deposited successfully.");
+        }
+        else{
+            System.out.println("Invalid amount");
+        }
     }
 
 }
